@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var storedTheme = window.localStorage.getItem("theme");
+
+          if (storedTheme === "dark") {
+            document.documentElement.classList.add("dark");
+            return;
+          }
+
+          if (
+            !storedTheme &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+          ) {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (_) {
+          // Ignore storage access issues and continue with default theme.
+        }
+      })();
+    </script>
+    <meta
+      name="description"
+      content="Goldquest Biotechnologies — supplier of laboratory equipment, reagents, and diagnostic instruments for hospitals and research laboratories."
+    />
+    <title>Goldquest Biotechnologies</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
