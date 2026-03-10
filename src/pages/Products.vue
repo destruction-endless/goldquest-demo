@@ -38,12 +38,10 @@
       </p>
     </div>
 
-    <div
-      class="grid grid-cols-1 xl:grid-cols-[280px_minmax(0,1fr)] gap-10 items-start"
-    >
+    <div class="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-10 items-start">
       <!-- Sidebar -->
       <aside
-        class="bg-white dark:bg-slate-800 rounded-xl shadow p-6 border border-gray-200 dark:border-slate-700 transition-colors duration-300"
+        class="w-full md:w-auto bg-white dark:bg-slate-800 rounded-xl shadow p-6 border border-gray-200 dark:border-slate-700 transition-colors duration-300"
       >
         <h2
           class="text-lg font-semibold text-brand-primary dark:text-white mb-4"
@@ -89,7 +87,7 @@
       </aside>
 
       <!-- Products -->
-      <div>
+      <div class="min-w-0">
         <input
           v-model="search"
           placeholder="Search products..."
